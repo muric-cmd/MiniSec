@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniSec - Registracija</title>
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+
+    <main class="kartica">
+        <h1>Minisec</h1>
+        <h2>Napravi nalog</h2>
+
+        <form action="" id="registration-form" novalidate>
+            <div class="polje">
+                <label for="registration-username">Korisnicko ime:</label>
+
+                <input
+                    type="text"
+                    id="registration-username"
+                    name="registration-username"
+                >
+            </div>
+            <div class="polje">
+                <label for="registration-password">Lozinka:</label>
+
+                <div class="password-red">
+                    <input 
+                        type="password"
+                        id="registration-password"
+                        name="registration-password"
+                    >
+
+                    <button type="button" class="toggle-pass-btn">Show</button>
+                </div>
+            </div>
+
+            <div class="jacina-sekcija">
+                <span>
+                    Jacina:
+                    <strong id="jacina-tekst">Nije uneta</strong>
+                </span>
+
+                <div class="jacina-pozadina">
+                    <div id="jacina-traka"></div>
+                </div>
+            </div>
+
+            <div class="polje">
+                <label for="registration-password-check">Potvrdi lozinku:</label>
+
+                <div class="password-red">
+                    <input
+                        type="password"
+                        id="registration-password-check"
+                        name="registration-password-check"
+                    >
+
+                    <button type="button" class="toggle-pass-btn">Show</button>
+                </div>
+            </div>
+
+            <button type="submit">Registruj se</button>
+            <p>Vec imas nalog? <a href="index.html">Prijavi se</a></p>
+            <p id="registration-msg" class="message"></p>
+        </form>
+    </main>
+
+    
+    <script type="module" src="js/index.js"></script>
+
+</body>
+</html>

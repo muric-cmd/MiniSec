@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniSec - Prijava</title>
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+    <main class="kartica">
+        <h1>MiniSec</h1>
+        <h2>Prijavi se</h2>
+
+        <form id="login-form" novalidate>
+            <div class="polje">
+                <label for="username">Korisnicko ime:</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username"
+                >
+            </div>
+
+            <div class="polje">
+                <label for="login-password">Lozinka:</label>
+                <div class="password-red">
+                    <input
+                        type="password"
+                        id="login-password"
+                        name="login-password"
+                    >
+
+                    <button
+                        type="button"
+                        class="toggle-pass-btn"
+                    >
+                        Show
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit">Prijavi se</button>
+                <p>Nemate nalog? <a href="registracija.html">Registrujte se.</a></p>
+            </div>
+            <p id="login-msg" class="message"></p>
+        </form>
+    </main>
+
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
