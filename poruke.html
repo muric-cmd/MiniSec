@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniSec - Poruke</title>
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+    <main class="kartica kartica-poruke">
+        <header>
+            <h1>MiniSec - Poruke</h1>
+            <p>
+                Prijavljen:
+                <strong id="prijavljen-korisnik"></strong>
+            </p>
+
+            <button type="button" id="odjava-btn">Odjava</button>
+        </header>
+
+        <form action="" id="poruka-form">
+            <div>
+                <label for="primalac">Primalac</label>
+                <select name="primalac" id="primalac">
+                    <option value="">Izaberi primaoca</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="tekst-poruke">Poruka</label>
+                <textarea name="tekst" rows="5" id="tekst-poruke"></textarea>
+            </div>
+
+            <button type="submit">Posalji</button>
+            <p id="poruka-msg" class="message" role="status"></p>
+        </form>
+
+        <section>
+            <h2>Primljene poruke</h2>
+            <ul id="primljene-poruke"></ul>
+        </section>
+    </main>
+
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

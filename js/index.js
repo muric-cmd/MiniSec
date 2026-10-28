@@ -1,3 +1,4 @@
+import { pokreniPoruke } from "./poruke.js";
 import { pokreniPrijavu } from "./prijava.js";
 import { pokreniRegistraciju } from "./registracija.js";
 
@@ -27,3 +28,5 @@ if (document.querySelector("#login-form")) {
 if (document.querySelector("#registration-form")) {
     pokreniRegistraciju();
 }
+
+if (document.querySelector("#poruka-form")) {pokreniPoruke();}

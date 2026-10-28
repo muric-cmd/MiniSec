@@ -196,6 +196,94 @@ input.neispravno {
 }
 
 
+/* Stranica za poruke */
+
+.kartica-poruke {
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.kartica-poruke header {
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #d6e0e8;
+}
+
+.kartica-poruke header p {
+    text-align: center;
+}
+
+#odjava-btn {
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background-color: #6c757d;
+}
+
+#odjava-btn:hover {
+    background-color: #565e64;
+}
+
+#poruka-form > div {
+    margin-bottom: 18px;
+}
+
+.kartica-poruke select,
+.kartica-poruke textarea {
+    width: 100%;
+    padding: 10px;
+    font: inherit;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.kartica-poruke textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.kartica-poruke select:focus,
+.kartica-poruke textarea:focus {
+    outline: 2px solid #2471a3;
+    outline-offset: 2px;
+}
+
+.kartica-poruke section {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #d6e0e8;
+}
+
+#primljene-poruke {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#primljene-poruke li {
+    padding: 14px;
+    margin-bottom: 12px;
+    background-color: #f3f7fa;
+    border: 1px solid #d6e0e8;
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+}
+
+#primljene-poruke li p {
+    margin: 0;
+}
+
+#primljene-poruke li p:first-child {
+    margin-bottom: 8px;
+    color: #2471a3;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#primljene-poruke li p + p {
+    white-space: pre-wrap;
+}
+
 /* Smaller screens */
 
 @media (max-width: 480px) {
