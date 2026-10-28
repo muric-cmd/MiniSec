@@ -2,7 +2,6 @@ export const pokreniPrijavu = () => {
     const loginForm = document.querySelector("#login-form");
     const usernameInput = document.querySelector("#username");
     const passwordInput = document.querySelector("#login-password");
-
     const loginMsg = document.querySelector("#login-msg");
 
     loginForm.addEventListener("submit", (event) => {
@@ -19,28 +18,38 @@ export const pokreniPrijavu = () => {
 
         if (korisnickoIme === "" || lozinka === "") {
             loginMsg.textContent = "Sva polja su obavezna.";
+            loginMsg.classList.add("greska");
 
-            if(korisnickoIme === "") {
+            if (korisnickoIme === "") {
                 usernameInput.classList.add("neispravno");
             }
-            if(lozinka === "") {
+
+            if (lozinka === "") {
                 passwordInput.classList.add("neispravno");
             }
 
             return;
         }
 
-        const korisnici = JSON.parse(localStorage.getItem("korisnici")) || [];
+        const korisnici =
+            JSON.parse(localStorage.getItem("korisnici")) || [];
 
         const pronadjenKorisnik = korisnici.find((korisnik) => {
-            const istoIme = korisnik.korisnickoIme === korisnickoIme;
-            const istaLozinka = korisnik.lozinka === lozinka;
+            return korisnik.korisnickoIme === korisnickoIme
+                && korisnik.lozinka === lozinka;
+        });
 
-            return istoIme && istaLozinka;
-        })
+        if (!pronadjenKorisnik) {
+            loginMsg.textContent = "Pogrešno korisničko ime ili lozinka.";
+            loginMsg.classList.add("greska");
+            return;
+        }
 
-        localStorage.setItem("prijavljenKorisnik", pronadjenKorisnik.korisnickoIme);
+        localStorage.setItem(
+            "prijavljenKorisnik",
+            pronadjenKorisnik.korisnickoIme
+        );
 
         window.location.href = "poruke.html";
-    })
-}
+    });
+};

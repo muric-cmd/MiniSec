@@ -1,16 +1,16 @@
-import {pokreniPrijavu} from "./prijava.js";
-import {pokreniRegistraciju} from "./registracija.js";
+import { pokreniPrijavu } from "./prijava.js";
+import { pokreniRegistraciju } from "./registracija.js";
 
 const togglePassword = (event) => {
     const button = event.currentTarget;
     const passwordInput = button.previousElementSibling;
 
-    if(passInput.type === "password") {
-        passInput.type = "text";
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
         button.textContent = "Hide";
     } else {
-        passInput.type = "password";
-        button.textContent = "Show"
+        passwordInput.type = "password";
+        button.textContent = "Show";
     }
 };
 
@@ -20,8 +20,10 @@ togglePassBtns.forEach((btn) => {
     btn.addEventListener("click", togglePassword);
 });
 
-const loginForm = document.querySelector("#login-form");
-const registrationForm = document.querySelector("#registration-form");
+if (document.querySelector("#login-form")) {
+    pokreniPrijavu();
+}
 
-if (loginForm) {pokreniPrijavu();}
-if (registrationForm) {pokreniRegistraciju();}
+if (document.querySelector("#registration-form")) {
+    pokreniRegistraciju();
+}
